@@ -1,9 +1,9 @@
-Exemplos de códigos em Python
+Coleção de códigos em Python
 ===
 
-Coleção de códigos em Python que podem ajudar a entender a linguagem Python através de exemplos.
+Quer contribuir? Fique à vontade.
 
-Lista (cronológica) dos códigos:
+Você pode mandar o seu script ou fazer uma nova versão de algum exemplo já existente.
 
 1. [Game Guess Number](guess-number)
 2. [Unit Test](unittest)

@@ -24,8 +24,7 @@ while guess.taken < guess.maxAttempts:
         break
 
 if player.guess == guess.number:
-    print('Good job, ' + player.name + '! You guessed my number in ' +
-    str(guess.taken) + ' guesses!')
+    print('Good job, ' + player.name + '! You guessed my number in ' + str(guess.taken) + ' guesses!')
 
 if player.guess != guess.number:
     print('Nope. The target I was thinking of was ' + str(guess.number))

@@ -1,11 +1,5 @@
-Coleção de códigos em Python
-===
+![image](https://user-images.githubusercontent.com/1257048/203304118-a902976a-72b9-4e7c-bc06-80f73c5afad5.png)
 
-Quer contribuir? Fique à vontade.
+# A Brief Guide to Python Testing
 
-Você pode mandar o seu script ou fazer uma nova versão de algum exemplo já existente.
-
-1. [Game Guess Number](guess-number)
-2. [Unit Test](unittest)
-3. [Sys-arg](sys-arg)
-4. [Google Python Exercises](google-python-exercises)
+A little guide to help you test your Python code.

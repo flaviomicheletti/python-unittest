@@ -10,3 +10,8 @@
       DeprecationWarning: 'U' mode is deprecated f = open(filename, 'rU')
 
 ![image](https://user-images.githubusercontent.com/1257048/203403387-6e30ecbb-8001-4f5a-87f2-6ad56509e565.png)
+
+
+## docs
+
+https://developers.google.com/edu/python/exercises/baby-names

@@ -3,3 +3,10 @@
 # A Brief Guide to Python Testing
 
 A little guide to help you test your Python code.
+
+
+    virtualenv .
+    source bin/activate
+    pip install --upgrade pip
+    pip install mock
+    deactivate

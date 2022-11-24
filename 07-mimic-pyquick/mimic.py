@@ -42,11 +42,11 @@ import sys
 def mimic_dict(filename):
     """Returns mimic dict mapping each word to list of words which follow it."""
     mimic_dict = {}
-    f = open(filename, 'r')
+    f = open(filename, "r")
     text = f.read()
     f.close()
     words = text.split()
-    prev = ''
+    prev = ""
     for word in words:
         if not prev in mimic_dict:
             mimic_dict[prev] = [word]
@@ -67,19 +67,19 @@ def print_mimic(mimic_dict, word):
         nexts = mimic_dict.get(word)
         if not nexts:
             # Fallback to '' if not found
-            nexts = mimic_dict['']
+            nexts = mimic_dict[""]
         word = random.choice(nexts)
 
 
 # Provided main(), calls mimic_dict() and mimic()
 def main():
     if len(sys.argv) != 2:
-        print('usage: ./mimic.py file-to-read')
+        print("usage: ./mimic.py file-to-read")
         sys.exit(1)
 
     dict = mimic_dict(sys.argv[1])
-    print_mimic(dict, '')
+    print_mimic(dict, "")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

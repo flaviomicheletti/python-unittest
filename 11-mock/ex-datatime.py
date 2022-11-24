@@ -1,10 +1,12 @@
 import datetime
 from unittest.mock import Mock
 
+
 def is_weekday():
     today = datetime.datetime.today()
     # Python's datetime library treats Monday as 0 and Sunday as 6
-    return (0 <= today.weekday() < 5)
+    return 0 <= today.weekday() < 5
+
 
 # Save a couple of test days
 tuesday = datetime.datetime(year=2019, month=1, day=1)

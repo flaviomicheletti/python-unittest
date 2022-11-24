@@ -1,10 +1,4 @@
 #!/usr/bin/python
-# Copyright 2010 Google Inc.
-# Licensed under the Apache License, Version 2.0
-# http://www.apache.org/licenses/LICENSE-2.0
-
-# Google's Python Class
-# http://code.google.com/edu/languages/google-python-class/
 
 import sys
 import re
@@ -45,23 +39,23 @@ def extract_names(filename):
     names = []
 
     # Open and read the file.
-    f = open(filename, 'rU')
+    f = open(filename, "rU")
     text = f.read()
     # Could process the file line-by-line, but regex on the whole text
     # at once is even easier.
 
     # Get the year.
-    year_match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)
+    year_match = re.search(r"Popularity\sin\s(\d\d\d\d)", text)
     if not year_match:
         # We didn't find a year, so we'll exit with an error message.
-        sys.stderr.write('Couldn\'t find the year!\n')
+        sys.stderr.write("Couldn't find the year!\n")
         sys.exit(1)
     year = year_match.group(1)
     names.append(year)
 
     # Extract all the data tuples with a findall()
     # each tuple is: (rank, boy-name, girl-name)
-    tuples = re.findall(r'<td>(\d+)</td><td>(\w+)</td>\<td>(\w+)</td>', text)
+    tuples = re.findall(r"<td>(\d+)</td><td>(\w+)</td>\<td>(\w+)</td>", text)
     # print tuples
 
     # Store data into a dict using each name as a key and that
@@ -97,12 +91,12 @@ def main():
     args = sys.argv[1:]
 
     if not args:
-        print('usage: [--summaryfile] file [file ...]')
+        print("usage: [--summaryfile] file [file ...]")
         sys.exit(1)
 
     # Notice the summary flag and remove it from args if it is present.
     summary = False
-    if args[0] == '--summaryfile':
+    if args[0] == "--summaryfile":
         summary = True
         del args[0]
 
@@ -113,15 +107,15 @@ def main():
         names = extract_names(filename)
 
         # Make text out of the whole list
-        text = '\n'.join(names)
+        text = "\n".join(names)
 
         if summary:
-            outf = open(filename + '.summary', 'w')
-            outf.write(text + '\n')
+            outf = open(filename + ".summary", "w")
+            outf.write(text + "\n")
             outf.close()
         else:
             print(text)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

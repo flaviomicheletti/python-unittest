@@ -1,8 +1,10 @@
 ![image](https://user-images.githubusercontent.com/1257048/203304118-a902976a-72b9-4e7c-bc06-80f73c5afad5.png)
 
-# A Brief Guide to Python Testing
+# A short practical guide to testing Python
 
-A little guide to help you test your Python code.
+A little guide to help you test your Python code with framework __unittest__.
+
+https://docs.python.org/3/library/unittest.html
 
 
 # Instalation

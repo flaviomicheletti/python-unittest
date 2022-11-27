@@ -5,8 +5,22 @@
 A little guide to help you test your Python code.
 
 
+# Instalation
+
+__venv:__
+
+    python3 -m venv venv
+    . venv/bin/activate
+
+__virtualenv:__
+
     virtualenv .
     source bin/activate
     pip install --upgrade pip
     pip install mock
     deactivate
+
+
+## Running
+
+    python -m unittest discover -p 'test_*.py'

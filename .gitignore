@@ -1,6 +1,6 @@
 *.pyc
 nbproject/
-__init__.py
+__pycache__
 python-exemplos.nja
 bin
 lib

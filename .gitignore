@@ -2,5 +2,6 @@
 nbproject/
 __pycache__
 python-exemplos.nja
+venv
 bin
 lib

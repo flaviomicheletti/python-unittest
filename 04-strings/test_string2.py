@@ -99,7 +99,3 @@ class MyTest(unittest.TestCase):
         self.assertEqual(front_back("abcd", "xy"), "abxcdy")
         self.assertEqual(front_back("abcde", "xyz"), "abcxydez")
         self.assertEqual(front_back("Kitten", "Donut"), "KitDontenut")
-
-
-if __name__ == "__main__":
-    unittest.main()

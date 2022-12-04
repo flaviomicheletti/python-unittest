@@ -107,7 +107,3 @@ class MyTest(unittest.TestCase):
         self.assertEqual(mix_up("dog", "dinner"), "dig donner")
         self.assertEqual(mix_up("gnash", "sport"), "spash gnort")
         self.assertEqual(mix_up("pezzy", "firm"), "fizzy perm")
-
-
-if __name__ == "__main__":
-    unittest.main()

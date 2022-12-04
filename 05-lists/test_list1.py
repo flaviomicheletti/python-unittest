@@ -93,7 +93,3 @@ class MyTest(unittest.TestCase):
             sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
             [(2, 2), (1, 3), (3, 4, 5), (1, 7)],
         )
-
-
-if __name__ == "__main__":
-    unittest.main()

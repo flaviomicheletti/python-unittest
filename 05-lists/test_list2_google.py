@@ -60,7 +60,3 @@ class MyTest(unittest.TestCase):
             linear_merge(["aa", "aa"], ["aa", "bb", "bb"]),
             ["aa", "aa", "aa", "bb", "bb"],
         )
-
-
-if __name__ == "__main__":
-    unittest.main()

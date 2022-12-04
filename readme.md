@@ -28,6 +28,7 @@ In both environments you will need to install it only once.
 
     pip install mock
     pip install requests
+    pip install coverage
 
 ## Running
 

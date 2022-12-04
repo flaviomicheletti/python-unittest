@@ -1,7 +1,7 @@
 *.pyc
-nbproject/
 __pycache__
-python-exemplos.nja
+htmlcov
+.coverage
 venv
 bin
 lib

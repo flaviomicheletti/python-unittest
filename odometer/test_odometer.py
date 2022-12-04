@@ -19,6 +19,7 @@ class TestOdometer(unittest.TestCase):
         odometer.speed.return_value = 59
         self.assertTrue(odometer.alert())
 
+
 """
 clear && python -m unittest test_odometer.py
 """

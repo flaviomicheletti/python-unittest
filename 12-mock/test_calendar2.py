@@ -14,8 +14,8 @@ def get_holidays():
 class TestCalendar(unittest.TestCase):
     def log_request(self, url):
         # Log a fake request for test output purposes
-        print(f'Making a request to {url}.')
-        print('Request received!')
+        # print(f'Making a request to {url}.')
+        # print('Request received!')
 
         # Create a new Mock to imitate a Response
         response_mock = Mock()

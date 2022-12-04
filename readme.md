@@ -34,3 +34,10 @@ In both environments you will need to install it only once.
 
     python -m unittest discover -v
     python -m unittest discover -p 'test_*.py'
+
+
+## Coverage
+
+    coverage run -m unittest discover
+    coverage report -m
+    coverage html

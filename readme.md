@@ -31,4 +31,5 @@ In both environments you will need to install it only once.
 
 ## Running
 
+    python -m unittest discover -v
     python -m unittest discover -p 'test_*.py'

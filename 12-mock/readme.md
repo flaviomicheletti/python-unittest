@@ -1,15 +1,10 @@
-
-
+# Readme
 
 - https://realpython.com/python-mock-library/
-
 - https://realpython.com/python-testing/
 
-- https://www.uvicorn.org/
 
-- https://flask.palletsprojects.com/en/2.2.x/tutorial/tests/
+You will need
 
-- https://devcenter.heroku.com/categories/python-support
-
-- https://devcenter.heroku.com/articles/clock-processes-python
-
+    pip install mock
+    pip install requests

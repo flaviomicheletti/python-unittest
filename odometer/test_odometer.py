@@ -21,5 +21,7 @@ class TestOdometer(unittest.TestCase):
 
 
 """
-clear && python -m unittest test_odometer.py
+Interesting because if you run the command below, the `odometer` file is needed.
+
+python -m unittest test_odometer.py
 """

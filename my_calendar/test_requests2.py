@@ -32,7 +32,3 @@ class TestCalendar(unittest.TestCase):
         # Test a successful, logged request
         requests.get.side_effect = self.log_request
         assert get_holidays()["12/25"] == "Christmas"
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -13,5 +13,3 @@ class TestCalendar(unittest.TestCase):
             mock_requests.get.assert_called_once()
 
 
-if __name__ == "__main__":
-    unittest.main()

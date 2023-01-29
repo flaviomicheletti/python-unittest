@@ -8,7 +8,3 @@ class TestCalendar(unittest.TestCase):
     def test_get_holidays_timeout(self, mock_requests):
         with self.assertRaises(requests.exceptions.Timeout):
             get_holidays()
-
-
-if __name__ == "__main__":
-    unittest.main()

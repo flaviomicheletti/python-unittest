@@ -11,11 +11,8 @@ class Test(unittest.TestCase):
     user_name = []  # variable that stores person name
 
     # test case function to check the Person.set_name function
-    def test_0_set_name(self):
-        print("Start set_name test\n")
-        """
-        Any method which starts with ``test_`` will considered as a test case.
-        """
+    def test_set_name1(self):
+        # print("Start set_name test\n")
         for i in range(4):
             # initialize a name
             name = "name" + str(i)
@@ -34,11 +31,8 @@ class Test(unittest.TestCase):
         # print("\nFinish set_name test\n")
 
     # test case function to check the Person.get_name function
-    def test_1_get_name(self):
+    def test_get_name2(self):
         # print("\nStart get_name test\n")
-        """
-        Any method that starts with ``test_`` will be considered as a test case.
-        """
         length = len(self.user_id)  # total number of stored user information
         # print("user_id length = ", length)
         # print("user_name length = ", len(self.user_name))

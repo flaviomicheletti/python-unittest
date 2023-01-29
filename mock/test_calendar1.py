@@ -17,6 +17,3 @@ class TestCalendar(unittest.TestCase):
         requests.get.side_effect = Timeout
         with self.assertRaises(Timeout):
             get_holidays()
-
-if __name__ == '__main__':
-    unittest.main()

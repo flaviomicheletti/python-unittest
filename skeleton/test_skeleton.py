@@ -20,5 +20,3 @@ class TestingClass(unittest.TestCase):
         self.assertEqual(obj.fun(3), 4)
 
 
-if __name__ == "__main__":
-    unittest.main()

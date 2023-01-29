@@ -29,6 +29,3 @@ class TestCalendar(unittest.TestCase):
         assert get_holidays()['12/25'] == 'Christmas'
         # Finally, assert .get() was called twice
         assert requests.get.call_count == 2
-
-if __name__ == '__main__':
-    unittest.main()

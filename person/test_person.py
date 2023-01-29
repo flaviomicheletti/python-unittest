@@ -53,7 +53,3 @@ class Test(unittest.TestCase):
                 self.assertEqual("There is no such user", self.person.get_name(i))
         # print("\nFinish get_name test\n")
 
-
-if __name__ == "__main__":
-    # begin the unittest.main()
-    unittest.main()

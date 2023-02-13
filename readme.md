@@ -11,16 +11,7 @@ https://docs.python.org/3/library/unittest.html
 
 __venv:__
 
-    python3 -m venv .venv
-    . .venv/bin/activate
-
-__virtualenv:__
-
-    virtualenv .
-    source bin/activate
-    pip install --upgrade pip
-
-    deactivate
+    python3 -m venv .venv && . .venv/bin/activate
 
 ## Install
 

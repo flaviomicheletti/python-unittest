@@ -1,4 +1,4 @@
-# Patch
+# Example "total"
 
 - https://www.pythontutorial.net/python-unit-testing/python-patch/
 

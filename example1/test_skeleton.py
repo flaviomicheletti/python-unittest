@@ -1,6 +1,5 @@
 import unittest
 
-
 def fun(x):
     return x + 1
 
@@ -10,7 +9,7 @@ class MyFun:
 
 
 class TestingFunctions(unittest.TestCase):
-    def test(self):
+    def test_fun(self):
         self.assertEqual(fun(3), 4)
 
 

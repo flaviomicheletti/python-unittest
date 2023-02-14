@@ -1,16 +1,22 @@
 import unittest
 from requests.exceptions import Timeout
 from unittest.mock import Mock
-# from other_calendar import get_holidays, requests
 
 # Mock requests to control its behavior
 requests = Mock()
 
+
 def get_holidays():
-    r = requests.get('http://localhost/api/holidays')
-    if r.status_code == 200:
-        return r.json()
-    return None
+    response = requests.get("http://localhost/api/holidays")
+    if response.status_code == 200:
+        return response.json()
+    # try:
+    #     response = requests.get("http://localhost/api/holidays")
+    #     if response.status_code == 200:
+    #         return response.json()
+    # except:
+    #     return {}
+
 
 class TestCalendar(unittest.TestCase):
     def test_get_holidays_timeout(self):

@@ -9,3 +9,4 @@ class TestTotalMock(unittest.TestCase):
         total.read.return_value = [1, 2, 3]
         result = total.calculate_total("")
         self.assertEqual(result, 6)
+

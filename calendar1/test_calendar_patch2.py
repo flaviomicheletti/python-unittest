@@ -1,7 +1,7 @@
+import requests
 import unittest
-from my_calendar import requests, get_holidays
 from unittest.mock import patch
-
+from calendar1 import get_holidays
 
 class TestCalendar(unittest.TestCase):
     @patch.object(requests, "get", side_effect=requests.exceptions.Timeout)

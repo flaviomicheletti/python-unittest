@@ -11,7 +11,7 @@ class TestMagicMock(unittest.TestCase):
 
         # Set up the mock response
         mock_response = MagicMock()
-        mock_response.return_value.status_code = 200
+        mock_response.status_code = 200
         mock_response.json.return_value = actual
 
         # Create a mock object for the requests.get method

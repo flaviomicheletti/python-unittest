@@ -25,18 +25,18 @@ class TestCalendar(unittest.TestCase):
         # Restore the original requests.get method
         calendar2.requests.get = original
 
-    # def test_get_data_failure(self):
-    #     # Mock the requests.get method to return a failed response
-    #     requests = Mock()
-    #     requests.get.return_value.status_code = 404
+    def test_get_data_failure(self):
+        # Mock the requests.get method to return a failed response
+        requests = Mock()
+        requests.get.return_value.status_code = 404
 
-    #     # Temporarily replace the requests.get method with the mocked version
-    #     original = calendar2.requests.get
-    #     calendar2.requests.get = requests.get
+        # Temporarily replace the requests.get method with the mocked version
+        original = calendar2.requests.get
+        calendar2.requests.get = requests.get
 
-    #     # Test that the get_data function returns None when the response is not successful
-    #     result = calendar2.get_data()
-    #     self.assertIsNone(result)
+        # Test that the get_data function returns None when the response is not successful
+        result = calendar2.get_data()
+        self.assertIsNone(result)
 
-    #     # Restore the original requests.get method
-    #     calendar2.requests.get = original
+        # Restore the original requests.get method
+        calendar2.requests.get = original

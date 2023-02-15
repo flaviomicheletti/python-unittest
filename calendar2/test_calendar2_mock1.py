@@ -17,10 +17,10 @@ class TestCalendar(unittest.TestCase):
         original = calendar2.requests.get
         calendar2.requests.get = mock.get
 
-        # Test that the get_data function returns the expected result
-        result = calendar2.get_data()
-        self.assertEqual(result["12/25"], "Christmas")
-        self.assertEqual(result["7/4"], "Independence Day")
+        # Test that the get_data function returns the expected actual
+        actual = calendar2.get_data()
+        self.assertEqual(actual["12/25"], "Christmas")
+        self.assertEqual(actual["7/4"], "Independence Day")
 
         # Restore the original requests.get method
         calendar2.requests.get = original
@@ -35,8 +35,8 @@ class TestCalendar(unittest.TestCase):
         calendar2.requests.get = requests.get
 
         # Test that the get_data function returns None when the response is not successful
-        result = calendar2.get_data()
-        self.assertIsNone(result)
+        actual = calendar2.get_data()
+        self.assertIsNone(actual)
 
         # Restore the original requests.get method
         calendar2.requests.get = original

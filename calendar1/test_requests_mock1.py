@@ -9,5 +9,6 @@ class TestCalendar(unittest.TestCase):
         """ Test a connection timeout """
         get_holidays = Mock()
         get_holidays.side_effect = Timeout
+        
         with self.assertRaises(Timeout):
             get_holidays()

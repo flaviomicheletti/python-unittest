@@ -7,13 +7,13 @@ def get_data(url):
 
 class TestGetData(unittest.TestCase):
     @patch('requests.get')
-    def test_get_data_with_mock(self, mock_get):
+    def test_get_data_with_mock(self, mock):
         mock_response = Mock()
         mock_response.json.return_value = {'data': 'mocked data'}
-        mock_get.return_value = mock_response
+        mock.return_value = mock_response
 
-        result = get_data('http://test.com/data')
+        actual = get_data('http://test.com/data')
+        self.assertEqual(actual, {'data': 'mocked data'})
 
-        mock_get.assert_called_with('http://test.com/data')
+        mock.assert_called_with('http://test.com/data')
         mock_response.json.assert_called_once()
-        self.assertEqual(result, {'data': 'mocked data'})

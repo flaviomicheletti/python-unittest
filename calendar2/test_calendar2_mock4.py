@@ -24,10 +24,14 @@ class TestCalendar(unittest.TestCase):
         }
         # Set the side effect of .get()
         requests.get.side_effect = [Timeout, response_mock]
+
         # Test that the first request raises a Timeout
         with self.assertRaises(Timeout):
             get_holidays()
+
         # Now retry, expecting a successful response
-        assert get_holidays()["12/25"] == "Christmas"
+        actual = get_holidays()
+        assert actual["12/25"] == "Christmas"
+
         # Finally, assert .get() was called twice
         assert requests.get.call_count == 2

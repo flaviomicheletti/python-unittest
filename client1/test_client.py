@@ -6,12 +6,14 @@ import client1
 class TestAPIClient(unittest.TestCase):
     @patch("client1.requests")
     def test_get(self, mock_requests):
+        expected = {"key": "value"}
+
         mock_response = Mock()
-        mock_response.json.return_value = {"key": "value"}
+        mock_response.json.return_value = expected
         mock_requests.get.return_value = mock_response
 
         client = client1.APIClient("http://example.com")
-        result = client.get("endpoint")
-        self.assertEqual(result, {"key": "value"})
+        actual = client.get("endpoint")
+        self.assertEqual(actual, expected)
 
 

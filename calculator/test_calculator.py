@@ -6,8 +6,7 @@ import calculator
 class TestCalculator(TestCase):
     @patch("calculator.add", return_value=9)
     def test_add(self, add):
-        expected = add(5, 5)
-        self.assertEqual(expected, 9)
+        self.assertEqual(add(5, 5), 9)
 
 
 def mock_add(x, y):
@@ -17,5 +16,4 @@ def mock_add(x, y):
 class TestCalculatorSideEffect(TestCase):
     @patch("calculator.add", side_effect=mock_add)
     def test_add(self, add):
-        expected = add(5, 5)
-        self.assertEqual(expected, 11)
+        self.assertEqual(add(5, 5), 11)

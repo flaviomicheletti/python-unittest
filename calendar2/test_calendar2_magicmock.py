@@ -7,12 +7,12 @@ import calendar2
 class TestMagicMock(unittest.TestCase):
     def test_get_data(self):
 
-        actual = {"foo": "lish"}
+        expected = {"foo": "lish"}
 
         # Set up the mock response
         mock_response = MagicMock()
         mock_response.status_code = 200
-        mock_response.json.return_value = actual
+        mock_response.json.return_value = expected
 
         # Create a mock object for the requests.get method
         mock = MagicMock()
@@ -22,10 +22,10 @@ class TestMagicMock(unittest.TestCase):
         requests.get = mock
 
         # Call the function under test
-        result = calendar2.get_data()
+        actual = calendar2.get_data()
 
         # Assert that the function returns the expected result
-        self.assertEqual(result, actual)
+        self.assertEqual(actual, expected)
 
         # Assert that the requests.get method was called with the expected URL
         mock.assert_called_once_with("http://localhost/api/holidays")

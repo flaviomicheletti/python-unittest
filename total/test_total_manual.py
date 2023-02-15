@@ -9,13 +9,13 @@ class TestTotalManual(unittest.TestCase):
         patcher = patch("total.read")
 
         # create a mock object
-        mock_read = patcher.start()
+        mock = patcher.start()
 
         # assign the return value
-        mock_read.return_value = [1, 2, 3]
+        mock.return_value = [1, 2, 3]
 
         # test the calculate_total
-        result = total.calculate_total("")
+        result = total.calculate_total("fake-filename")
         self.assertEqual(result, 6)
 
         # stop patching

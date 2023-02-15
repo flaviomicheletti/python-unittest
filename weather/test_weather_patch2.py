@@ -8,9 +8,9 @@ class TestGetWeatherData(unittest.TestCase):
 
         mock_response = Mock()
         mock_response.json.return_value = {"main": {"temp": actual}}
-        mock_request = Mock(return_value=mock_response)
+        mock = Mock(return_value=mock_response)
         
-        with patch('weather.requests.get', new=mock_request):
+        with patch('weather.requests.get', new=mock):
             expected = get_weather_data("London")
             self.assertEqual(expected, actual)
 

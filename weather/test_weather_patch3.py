@@ -9,8 +9,8 @@ class TestGetWeatherData(unittest.TestCase):
 
         mock_response = MagicMock()
         mock_response.json.return_value = {"main": {"temp": actual}}
-        mock_request = MagicMock(return_value=mock_response)
+        mock = MagicMock(return_value=mock_response)
         
-        with unittest.mock.patch("weather.requests.get", new=mock_request):
+        with unittest.mock.patch("weather.requests.get", new=mock):
             expected = get_weather_data("London")
             self.assertEqual(expected, actual)

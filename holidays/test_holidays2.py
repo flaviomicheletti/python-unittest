@@ -4,7 +4,7 @@ import holidays
 
 
 class TestCalendar(unittest.TestCase):
-    def test_get_holidays_success(self):
+    def test_success2(self):
         # Mock the requests.get method to return a successful response
         requests = Mock()
         requests.get.return_value.status_code = 200
@@ -25,7 +25,7 @@ class TestCalendar(unittest.TestCase):
         # Restore the original requests.get method
         holidays.requests.get = original_requests_get
 
-    def test_get_holidays_failure(self):
+    def test_failure2(self):
         # Mock the requests.get method to return a failed response
         requests = Mock()
         requests.get.return_value.status_code = 404

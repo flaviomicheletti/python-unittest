@@ -4,7 +4,7 @@ import holidays
 
 
 class TestCalendar(unittest.TestCase):
-    def test_get_holidays_success(self):
+    def test_success1(self):
         # Mock the requests.get method to return a successful response
         requests = Mock()
         requests.get.return_value.status_code = 200
@@ -19,7 +19,7 @@ class TestCalendar(unittest.TestCase):
         self.assertEqual(result["12/25"], "Christmas")
         self.assertEqual(result["7/4"], "Independence Day")
 
-    def test_get_holidays_failure(self):
+    def test_failure1(self):
         # Mock the requests.get method to return a failed response
         requests = Mock()
         requests.get.return_value.status_code = 404

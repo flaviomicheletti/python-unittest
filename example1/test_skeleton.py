@@ -8,13 +8,13 @@ class MyFun:
         return n + 1
 
 
-class TestingFunctions(unittest.TestCase):
+class TestingFunctionFun(unittest.TestCase):
     def test_fun(self):
         self.assertEqual(fun(3), 4)
 
 
-class TestingClass(unittest.TestCase):
-    def test_fun(self):
+class TestingClassMyFun(unittest.TestCase):
+    def test_my_fun(self):
         obj = MyFun()
         self.assertEqual(obj.fun(3), 4)
 

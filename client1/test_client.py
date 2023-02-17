@@ -12,8 +12,8 @@ class TestAPIClient(unittest.TestCase):
         mock_response.json.return_value = expected
         mock_requests.get.return_value = mock_response
 
-        client = client1.APIClient("http://example.com")
-        actual = client.get("endpoint")
+        api = client1.Api("http://example.com")
+        actual = api.get("endpoint")
         self.assertEqual(actual, expected)
 
 

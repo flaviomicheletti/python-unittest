@@ -8,5 +8,5 @@ class TestTotalPatch(unittest.TestCase):
     def test_calculate_total(self, mock):
         mock.return_value = [1, 2, 3]
 
-        actual = total.calculate_total("fake-filename")
+        actual = total.calculate("fake-filename")
         self.assertEqual(actual, 6)

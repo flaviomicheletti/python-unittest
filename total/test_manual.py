@@ -15,7 +15,7 @@ class TestTotalManual(unittest.TestCase):
         mock.return_value = [1, 2, 3]
 
         # test the calculate_total
-        result = total.calculate_total("fake-filename")
+        result = total.calculate("fake-filename")
         self.assertEqual(result, 6)
 
         # stop patching

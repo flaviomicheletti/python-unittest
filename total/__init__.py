@@ -5,7 +5,7 @@ def read(filename):
         return [float(line.strip()) for line in lines]
 
 
-def calculate_total(filename):
+def calculate(filename):
     """return the sum of numbers in a text file"""
     numbers = read(filename)
     return sum(numbers)

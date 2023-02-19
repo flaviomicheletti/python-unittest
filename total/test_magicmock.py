@@ -8,6 +8,6 @@ class TestTotalMock(unittest.TestCase):
         total.read = MagicMock()
         total.read.return_value = [1, 2, 3]
 
-        actual = total.calculate_total("fake-filename")
+        actual = total.calculate("fake-filename")
         self.assertEqual(actual, 6)
 

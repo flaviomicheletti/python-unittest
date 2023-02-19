@@ -1,18 +1,25 @@
-class Person:
-    name = []
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import declarative_base
 
-    def set_name(self, user_name):
-        self.name.append(user_name)
-        return len(self.name) - 1
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
-    def get_name(self, user_id):
-        if user_id >= len(self.name):
-            return "There is no such user"
-        else:
-            return self.name[user_id]
+Base = declarative_base()
 
 
-# if __name__ == "__main__":
-#     person = Person()
-#     print("User Abbas has been added with id ", person.set_name("Abbas"))
-#     print("User associated with id 0 is ", person.get_name(0))
+class Person(Base):
+    __tablename__ = "people"
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    age = Column(Integer)
+    email = Column(String)
+
+engine = create_engine('sqlite:///example.db')
+Session = sessionmaker(bind=engine)
+
+def read_person(name):
+    session = Session()
+    person = session.query(Person).filter_by(name=name).first()
+    session.close()
+    return person

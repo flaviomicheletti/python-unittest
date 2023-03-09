@@ -1,7 +1,7 @@
 import requests
 import unittest
 from unittest.mock import Mock
-from holidays import get_holidays
+from calendar3 import get_holidays
 
 
 class TestCalendar(unittest.TestCase):

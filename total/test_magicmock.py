@@ -11,3 +11,6 @@ class TestTotalMock(unittest.TestCase):
         actual = total.calculate("fake-filename")
         self.assertEqual(actual, 6)
 
+#
+# 57%
+#

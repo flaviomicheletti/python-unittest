@@ -35,3 +35,7 @@ class TestCalendar(unittest.TestCase):
 
         # Finally, assert .get() was called twice
         assert requests.get.call_count == 2
+
+#
+# 29%, 95%
+#

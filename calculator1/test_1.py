@@ -5,8 +5,8 @@ from unittest.mock import patch
 
 class TestCalculator(TestCase):
     @patch("calculator1.add", return_value=9)
-    def test_add(self, add):
-        self.assertEqual(add(5, 5), 9)
+    def test_add(self, mock):
+        self.assertEqual(mock(5, 5), 9)
 
 
 def mock_add(x, y):
@@ -15,8 +15,8 @@ def mock_add(x, y):
 
 class TestCalculatorSideEffect(TestCase):
     @patch("calculator1.add", side_effect=mock_add)
-    def test_add(self, add):
-        self.assertEqual(add(5, 5), 11)
+    def test_add(self, mock):
+        self.assertEqual(mock(5, 5), 11)
 
 #
 # 50%

@@ -95,3 +95,7 @@ class TestLibrary(unittest.TestCase):
 
         # Delete the book
         self.library.delete_book("198")
+
+#
+# 100%
+#

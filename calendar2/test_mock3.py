@@ -33,3 +33,7 @@ class TestCalendar(unittest.TestCase):
         requests.get.side_effect = self.response_mock
         actual = get_holidays()
         assert actual["12/25"] == "Christmas"
+
+#
+# 29%, 95%
+#

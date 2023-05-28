@@ -15,3 +15,7 @@ class TestDivide(unittest.TestCase):
     def test_divide_valid(self):
         result = divide(10, 2)
         self.assertEqual(result, 5)
+
+#
+# 100%
+#

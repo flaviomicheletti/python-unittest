@@ -1,6 +1,6 @@
 import time
 
 
-def add(self, x, y):
+def add(x, y):
     time.sleep(5)
     return x + y

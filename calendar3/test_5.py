@@ -27,6 +27,10 @@ class TestCalendar(unittest.TestCase):
         # Reset the side effect of requests.get
         requests.get.side_effect = None
 
+#
+# 83%
+#
+
 """
 You're right that both examples achieve the same thing - they replace the requests.get 
 function with a mock that returns a successful response with a JSON payload.

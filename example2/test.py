@@ -1,9 +1,11 @@
 import unittest
 from unittest.mock import Mock, patch
 
+
 def get_data(url):
     import requests
     return requests.get(url).json()
+
 
 class TestGetData(unittest.TestCase):
     @patch('requests.get')
@@ -17,3 +19,7 @@ class TestGetData(unittest.TestCase):
 
         requests_mock.assert_called_with('http://test.com/data')
         mock_response.json.assert_called_once()
+
+#
+# 100%
+#

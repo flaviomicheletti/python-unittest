@@ -30,3 +30,7 @@ class TestGetData(unittest.TestCase):
         mock.assert_called_once_with(
             "https://api.openweathermap.org/data/2.5/weather?q=scs&appid=API_KEY"
         )
+
+#
+# 100%
+#

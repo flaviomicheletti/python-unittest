@@ -24,3 +24,7 @@ class TestCalendar(unittest.TestCase):
         requests.get.side_effect = Timeout
         with self.assertRaises(Timeout):
             get_holidays()
+
+#
+# 29%, 85%
+#

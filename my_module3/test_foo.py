@@ -27,3 +27,7 @@ class TestMyClass(unittest.TestCase):
 
             mock_get.assert_called_once_with("http://example.com")
             self.assertIsNone(data)
+
+#
+# 100%
+#

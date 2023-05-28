@@ -1,5 +1,5 @@
-import requests
 import unittest
+import requests
 from unittest.mock import patch
 from calendar1 import get_holidays
 
@@ -8,3 +8,7 @@ class TestCalendar(unittest.TestCase):
     def test_get_holidays_timeout(self, foo):
         with self.assertRaises(requests.exceptions.Timeout):
             get_holidays()
+
+#
+# 50%
+#

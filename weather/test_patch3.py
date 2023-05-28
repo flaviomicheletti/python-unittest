@@ -14,3 +14,7 @@ class TestGetWeatherData(unittest.TestCase):
         with unittest.mock.patch("weather.requests.get", new=mock):
             expected = get_weather_data("London")
             self.assertEqual(expected, actual)
+
+#
+# 100% 
+#

@@ -14,3 +14,6 @@ class TestGetWeatherData(unittest.TestCase):
             expected = get_weather_data("London")
             self.assertEqual(expected, actual)
 
+#
+# 100%
+#

@@ -40,3 +40,7 @@ class TestCalendar(unittest.TestCase):
 
         # Restore the original requests.get method
         calendar3.requests.get = original_requests_get
+
+#
+# 100%
+#

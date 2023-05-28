@@ -29,3 +29,7 @@ class TestMagicMock(unittest.TestCase):
 
         # Assert that the requests.get method was called with the expected URL
         mock.assert_called_once_with("http://localhost/api/holidays")
+
+#
+# 86%
+#

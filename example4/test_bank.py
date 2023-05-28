@@ -52,7 +52,7 @@ class TestBank(unittest.TestCase):
         assert account.get_balance() == 50
 
     def test_bank_account_insufficient_funds(self):
-        source = BankAccount("John", 100)        
+        source = BankAccount("John", 100)
 
         with self.assertRaises(ValueError):
             source.withdraw(200)
@@ -67,7 +67,6 @@ class TestBank(unittest.TestCase):
         assert source.get_balance() == 90
         assert destination.get_balance() == 210
 
-
     def test_bank_transaction_execute_failure(self):
         source = BankAccount("John", 100)
         destination = BankAccount("Mary")
@@ -76,4 +75,8 @@ class TestBank(unittest.TestCase):
 
         assert transaction.execute() == False
         assert source.get_balance() == 100
-        assert destination.get_balance() == 0        
+        assert destination.get_balance() == 0
+
+#
+# 100%
+#

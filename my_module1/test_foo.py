@@ -25,3 +25,7 @@ class TestSendEmail(unittest.TestCase):
                 f"From: from@example.com\nTo: to@example.com\nSubject: Test Subject\n\nTest Body",
             )
             smtp_instance.quit.assert_called_once()
+
+#
+# 100%
+#

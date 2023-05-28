@@ -12,3 +12,7 @@ class TestCalendar(unittest.TestCase):
         
         with self.assertRaises(Timeout):
             get_holidays()
+
+#
+# 40%
+#

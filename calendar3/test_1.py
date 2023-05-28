@@ -29,3 +29,7 @@ class TestCalendar(unittest.TestCase):
         with unittest.mock.patch("calendar3.requests", requests):
             result = calendar3.get_holidays()
         self.assertIsNone(result)
+
+#
+# 100%
+#

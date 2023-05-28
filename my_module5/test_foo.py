@@ -19,3 +19,7 @@ class TestMongoConnection(unittest.TestCase):
 
         # assert that the collection object was obtained from the mock database
         mock_db.__getitem__.assert_called_once_with('mycollection')
+
+#
+# 100%
+#

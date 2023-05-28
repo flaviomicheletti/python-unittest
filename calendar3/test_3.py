@@ -44,3 +44,7 @@ class TestCalendar(unittest.TestCase):
 
         # Test that the get_holidays function returns None when the response is not successful
         self.assertIsNone(get_holidays())
+
+#
+# 100%
+#

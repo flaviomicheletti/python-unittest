@@ -20,3 +20,7 @@ class TestTotalManual(unittest.TestCase):
 
         # stop patching
         patcher.stop()
+
+#
+# 57%
+#

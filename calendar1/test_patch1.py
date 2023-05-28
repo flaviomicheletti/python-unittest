@@ -14,4 +14,6 @@ class TestCalendar(unittest.TestCase):
             get_holidays()
             mock.get.assert_called_once()
 
-
+#
+# 50%
+#

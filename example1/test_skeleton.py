@@ -18,4 +18,6 @@ class TestingClassMyFun(unittest.TestCase):
         obj = MyFun()
         self.assertEqual(obj.fun(3), 4)
 
-
+#
+# 100%
+#

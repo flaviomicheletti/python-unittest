@@ -4,6 +4,10 @@ import odometer
 
 
 class TestOdometer(unittest.TestCase):
+    def test_speed(self):
+        s = odometer.speed()
+        self.assertIsInstance(s, int)
+
     @patch("odometer.speed")
     def test_alert_normal(self, mock):
         mock.return_value = 70
@@ -20,5 +24,5 @@ class TestOdometer(unittest.TestCase):
         self.assertTrue(odometer.alert())
 
 #
-# 88%
+# 100%
 #

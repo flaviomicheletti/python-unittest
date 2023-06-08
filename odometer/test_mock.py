@@ -1,9 +1,16 @@
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 import odometer
 
 
 class TestOdometer(unittest.TestCase):
+
+    def test_speed(self):
+        """It's a mystery to me why this test doesn't fulfill the function."""
+        s = odometer.speed()
+        self.assertIsInstance(s, int)
+
+
     def test_alert_normal(self):
         odometer.speed = Mock()
         odometer.speed.return_value = 70

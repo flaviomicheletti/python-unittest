@@ -45,3 +45,35 @@ issues or incomplete functionality. You can use the `
 @unittest.expectedFailure` decorator to mark a test method as an expected 
 failure. If the test fails as expected, it is not counted as a failure. 
 
+
+## Assertions
+
+In the `unittest` module in Python, there are several functions related to 
+assertions that can be used for testing purposes. These functions are 
+provided by the `TestCase` class, which is the base class for defining unit 
+tests. Here are the commonly used assertion functions in `unittest`: 
+
+1. `assertEqual(a, b)`: Asserts that `a` is equal to `b`.
+2. `assertNotEqual(a, b)`: Asserts that `a` is not equal to `b`.
+3. `assertTrue(x)`: Asserts that `x` is `True`.
+4. `assertFalse(x)`: Asserts that `x` is `False`.
+5. `assertIs(a, b)`: Asserts that `a` is identical to `b`.
+6. `assertIsNot(a, b)`: Asserts that `a` is not identical to `b`.
+7. `assertIsNone(x)`: Asserts that `x` is `None`.
+8. `assertIsNotNone(x)`: Asserts that `x` is not `None`.
+9. `assertIn(a, b)`: Asserts that `a` is a member of `b`.
+10. `assertNotIn(a, b)`: Asserts that `a` is not a member of `b`.
+11. `assertIsInstance(a, b)`: Asserts that `a` is an instance of `b`.
+12. `assertNotIsInstance(a, b)`: Asserts that `a` is not an instance of `b`.
+13. `assertAlmostEqual(a, b)`: Asserts that `a` is approximately equal to `b`.
+14. `assertNotAlmostEqual(a, b)`: Asserts that `a` is not approximately equal to `b`.
+15. `assertGreater(a, b)`: Asserts that `a` is greater than `b`.
+16. `assertGreaterEqual(a, b)`: Asserts that `a` is greater than or equal to `b`.
+17. `assertLess(a, b)`: Asserts that `a` is less than `b`.
+18. `assertLessEqual(a, b)`: Asserts that `a` is less than or equal to `b`.
+19. `assertRegex(s, r)`: Asserts that the regular expression `r` matches the string `s`.
+20. `assertNotRegex(s, r)`: Asserts that the regular expression `r` does not match the string `s`.
+
+These assertion functions can be used to validate different conditions in 
+your unit tests and ensure that the expected behavior of your code is met. 
+

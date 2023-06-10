@@ -1,10 +1,10 @@
 import unittest
 from unittest.mock import patch
-from weather import get_weather_data
+from api5 import get_weather_data
 
 
 class TestGetWeatherData(unittest.TestCase):
-    @patch("weather.requests.get")
+    @patch("api5.requests.get")
     def test_get_weather_data(self, mock):
         actual = 273.15
 

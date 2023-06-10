@@ -1,7 +1,7 @@
 # test_my_module.py
 import unittest
 from unittest.mock import MagicMock, patch
-from my_module2 import get_data
+from api3 import get_data
 
 class TestGetData(unittest.TestCase):
     def test_get_data_success(self):

@@ -1,18 +1,17 @@
 import unittest
 from unittest.mock import MagicMock
 import requests
-import calendar2
+from api5 import get_weather_data
 
 
-class TestMagicMock(unittest.TestCase):
+class TestGetData(unittest.TestCase):
     def test_get_data(self):
 
-        expected = {"foo": "lish"}
+        actual = 273.15
 
         # Set up the mock response
         mock_response = MagicMock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = expected
+        mock_response.json.return_value = {"main": {"temp": actual}}
 
         # Create a mock object for the requests.get method
         mock = MagicMock()
@@ -22,14 +21,16 @@ class TestMagicMock(unittest.TestCase):
         requests.get = mock
 
         # Call the function under test
-        actual = calendar2.get_data()
+        result = get_weather_data("scs")
 
         # Assert that the function returns the expected result
-        self.assertEqual(actual, expected)
+        self.assertEqual(result, actual)
 
         # Assert that the requests.get method was called with the expected URL
-        mock.assert_called_once_with("http://localhost/api/holidays")
+        mock.assert_called_once_with(
+            "https://api.openweathermap.org/data/2.5/weather?q=scs&appid=API_KEY"
+        )
 
 #
-# 86%
+# 100%
 #

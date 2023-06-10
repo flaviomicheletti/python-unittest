@@ -1,7 +1,7 @@
 # test_my_module.py
 import unittest
 from unittest.mock import MagicMock, patch
-from my_module3 import MyClass
+from api7 import MyClass
 
 
 class TestMyClass(unittest.TestCase):

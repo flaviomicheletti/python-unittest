@@ -29,6 +29,3 @@ class TestIsWeekday(unittest.TestCase):
         mock_datetime.today.return_value.weekday.return_value = 4
         self.assertTrue(is_weekday())
 
-
-if __name__ == '__main__':
-    unittest.main()

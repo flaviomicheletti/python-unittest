@@ -4,7 +4,7 @@ from unittest.mock import patch
 from calendar1 import is_weekday
 
 
-class TestIsWeekday(unittest.TestCase):
+class TestCalendar1(unittest.TestCase):
     @patch('calendar1.datetime')
     def test_weekday(self, mock_datetime):
         # Create a datetime object for a Monday

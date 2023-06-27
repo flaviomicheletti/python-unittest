@@ -31,13 +31,13 @@ assertions.
 mechanism that automatically discovers and runs all test cases and test 
 methods within a specified directory or module. 
 
-8. **Skipping Tests:** You can mark tests as skipped using the `
-@unittest.skip()` decorator or conditional skipping with the `
+8. **Skipping Tests:** You can mark tests as skipped using the 
+`@unittest.skip()` decorator or conditional skipping with the `
 @unittest.skipIf()` decorator. This allows you to temporarily exclude tests 
 from execution. 
 
-9. **Expected Failures:** You can mark tests as expected failures using the `
-@unittest.expectedFailure` decorator. These tests are executed but are not 
+9. **Expected Failures:** You can mark tests as expected failures using the 
+`@unittest.expectedFailure` decorator. These tests are executed but are not 
 counted as failures if they raise certain specified exceptions. 
 
 10. **Test Execution Order:** By default, the `unittest` framework runs test 
@@ -78,10 +78,10 @@ certain conditions using the `@unittest.skip()` and `@unittest.skipIf()`
 decorators. This can be useful for skipping tests on specific platforms or 
 configurations. 
 
-19. **Test Parameterization with TestCases:** You can use the `
-unittest.TestCase` class as a parameterized test case by creating subclasses 
+19. **Test Parameterization with TestCases:** You can use the 
+`unittest.TestCase` class as a parameterized test case by creating subclasses 
 with different sets of input data and test methods. 
 
 20. **Test Discovery Configuration:** You can configure the test discovery 
-process using various configuration files (such as `unittest.cfg` or `
-pyproject.toml`) or by setting environment variables.
+process using various configuration files (such as `unittest.cfg` or 
+`pyproject.toml`) or by setting environment variables.

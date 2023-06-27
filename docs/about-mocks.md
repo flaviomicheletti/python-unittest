@@ -11,7 +11,7 @@ create mocks using unittest in Python:
 The most basic way to create a mock object. You can use the `Mock` class to 
 replace the target object and define custom behavior for its methods or attributes.
 
-``` Python
+```Python
 from unittest.mock import Mock
 
 mocked_object = Mock()
@@ -25,7 +25,7 @@ A subclass of Mock that includes most of the magic methods (e.g.,
 behave like a container or support other magic methods.
 
 
-``` Python
+```Python
 from unittest.mock import MagicMock
 
 magic_mocked_object = MagicMock()
@@ -38,7 +38,7 @@ A context manager or decorator that temporarily replaces the specified object
 with a `Mock` or `MagicMock` during the test. This is useful when you want to 
 replace a function or a class in the module you're testing.
 
-``` Python
+```Python
 from unittest.mock import patch
 
 # As a context manager
@@ -59,7 +59,7 @@ A context manager or decorator that temporarily replaces a specific attribute
 of an object with a `Mock` or `MagicMock`. This is useful when you want to replace 
 a method or attribute of a class or an instance.
 
-``` Python
+```Python
 from unittest.mock import patch
 
 # As a context manager
@@ -77,7 +77,7 @@ def test_function(mocked_method):
 A context manager or decorator that allows you to patch multiple attributes of 
 an object simultaneously.
 
-``` Python
+```Python
 from unittest.mock import patch
 
 # As a context manager
@@ -95,7 +95,7 @@ def test_function():
 A mock for class or instance properties. This can be used in conjunction with 
 `patch.object` to replace a property with a mock.
 
-``` Python
+```Python
 from unittest.mock import PropertyMock, patch
 
 class MyClass:
@@ -129,7 +129,7 @@ Here are some common ways to configure mock objects:
 
 Set a return value for the mock object when it's called.
 
-``` Python
+```Python
 mocked_function.return_value = 'mocked_value'
 ```
 
@@ -140,7 +140,7 @@ it will be called with the same arguments as the mock, and the result will be
 the mock's return value. If an exception is provided, it will be raised when 
 the mock is called.
 
-``` Python
+```Python
 # Using a function
 def side_effect_function(*args, **kwargs):
     return 'side_effect_value'
@@ -155,7 +155,7 @@ mocked_function.side_effect = Exception('error_message')
 
 Assert that the mock was called exactly once with the specified arguments.
 
-``` Python
+```Python
 mocked_function.assert_called_once_with(arg1, arg2)
 ```
 
@@ -163,7 +163,7 @@ mocked_function.assert_called_once_with(arg1, arg2)
 
 Assert that the mock was last called with the specified arguments.
 
-``` Python
+```Python
 mocked_function.assert_called_with(arg1, arg2)
 ```
 
@@ -171,7 +171,7 @@ mocked_function.assert_called_with(arg1, arg2)
 
 Assert that the mock was called with the specified arguments at least once.
 
-``` Python
+```Python
 mocked_function.assert_any_call(arg1, arg2)
 ```
 
@@ -179,7 +179,7 @@ mocked_function.assert_any_call(arg1, arg2)
 
 Check the number of times the mock was called.
 
-``` Python
+```Python
 assert mocked_function.call_count == 2
 ```
 
@@ -187,7 +187,7 @@ assert mocked_function.call_count == 2
 
 Check the arguments of the last call to the mock.
 
-``` Python
+```Python
 assert mocked_function.call_args == ((arg1, arg2),)
 ```
 
@@ -195,7 +195,7 @@ assert mocked_function.call_args == ((arg1, arg2),)
 
 Check the arguments of all calls to the mock.
 
-``` Python
+```Python
 assert mocked_function.call_args_list == [((arg1, arg2),), ((arg3, arg4),)]
 ```
 
@@ -218,7 +218,7 @@ Resets the call count, call arguments, and child mocks of a mock object.
 This is useful when you want to reuse a mock object across different parts of 
 a test or across multiple tests.
 
-``` Python
+```Python
 mocked_function.reset_mock()
 ```
 
@@ -227,7 +227,7 @@ mocked_function.reset_mock()
 Configure a mock object's attributes and behavior in a single call using 
 keyword arguments.
 
-``` Python
+```Python
 mocked_object.configure_mock(attr1='value1', attr2='value2', method=Mock(return_value='method_value'))
 ```
 
@@ -237,7 +237,7 @@ Provide a specification for the mock object by passing an existing object or
 a list of attributes. This ensures that the mock object only has the same 
 attributes as the specified object or the provided list.
 
-``` Python
+```Python
 # Using an existing object
 mocked_object = Mock(spec=real_object)
 
@@ -249,7 +249,7 @@ mocked_object = Mock(spec=['attr1', 'attr2'])
 
 Similar to spec, but it also prevents the mock object from having new attributes assigned to it.
 
-``` Python
+```Python
 # Using an existing object
 mocked_object = Mock(spec_set=real_object)
 
@@ -264,7 +264,7 @@ calls the original object's method and returns its result. This is useful
 when you want to keep the original behavior but still track calls or add 
 side effects.
 
-``` Python
+```Python
 mocked_function = Mock(wraps=real_function)
 ```
 
@@ -273,7 +273,7 @@ mocked_function = Mock(wraps=real_function)
 A helper function to create a mock for the open function. This is useful when 
 you want to mock file I/O operations.
 
-``` Python
+```Python
 from unittest.mock import mock_open, patch
 
 m = mock_open(read_data='file_content')
@@ -287,7 +287,7 @@ with patch('builtins.open', m):
 A special constant that can be used in assertions to indicate that you don't 
 care about the exact value of an argument.
 
-``` Python
+```Python
 from unittest.mock import ANY
 
 mocked_function.assert_called_with(ANY, 'specific_arg')

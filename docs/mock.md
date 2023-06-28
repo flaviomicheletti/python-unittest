@@ -1,5 +1,7 @@
 # unittest.mock.Mock
 
+- https://breadcrumbscollector.tech/how-to-mock-in-python-almost-definitive-guide/
+
 Here are the most important concepts and features of `unittest.mock.Mock` 
 that will help you understand the majority (80%) of its functionality: 
 
